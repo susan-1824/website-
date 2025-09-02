@@ -1,0 +1,75 @@
+/* Social icons (top right in navbar) */
+.social-icons {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 1.2rem;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: #f0f0f0;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.social-icons a.instagram:hover {
+  color: #E4405F; /* Instagram pink */
+}
+
+.social-icons a.facebook:hover {
+  color: #1877F2; /* Facebook blue */
+}
+.social-icons a.youtube :hover {
+  color: #ff2c2c;
+}
+ 
+ /* Transparent while scrolling (popup effect) */
+nav.nav-transparent {
+  background-color: rgba(0, 0, 0, 0.4);
+  transform: scale(1.05); /* navbar grows */
+  opacity: 0.95;
+}
+
+nav.nav-transparent ul li a {
+  transform: scale(1.1);  /* links pop */
+  opacity: 0.9;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+}
+.part h2{
+  font-size: 50px;
+  margin-top: 30px; 
+} 
+
+.part {
+  width: 100%;
+  display: block;
+  clear: both;   /* forces next section to start below */
+  text-align: center; /* centers content if you like */
+}
+
+.specialties img {
+  max-width: 30%;   /* makes images fit side by side */
+  margin: 10px;
+  padding-bottom: 40px;
+  border-radius: 8px; /* optional: rounded corners */
+}
+
+
+.part p{
+  text-align: center;
+  padding: 30px;
+}
+
+#portfolio { background: #ffffff color:#000000 }
+#about { background: #555; color: #fff; }
+#contact { background: #777; color: #fff; }

@@ -1,0 +1,54 @@
+.specialties-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+  justify-content: center;
+  gap: 25px;
+}
+
+.specialties-gallery .item {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.specialties-gallery .item img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+
+/* fixed overlay */
+.specialty-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.6); /* transparent rectangle */
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.specialty-overlay h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.specialties-gallery .item:hover img {
+  transform: scale(1.1);
+}
+
+.specialties-gallery .item:hover .specialty-overlay {
+  opacity: 1;
+}
+
+.past h2 {
+padding-top: 25px;
+}

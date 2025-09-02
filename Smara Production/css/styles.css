@@ -1,0 +1,186 @@
+/* demo o */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Navbar styling */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;  /* center nav links */
+  align-items: center;
+}
+
+/* Logo on top-right */
+nav .logo {
+  position: absolute;
+  left: 2rem;      /* push to left */
+  top: 50%;
+  transform: translateY(-50%);  /* vertical align */
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #f0f0f0;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+/* Nav links */
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding-bottom: 2px;
+  transition: color 0.3s, border-bottom-color 0.3s;
+  border-bottom: 2px solid transparent;
+}
+nav a:hover {
+  color: #ffffff;
+}
+nav ul li {
+  position: relative; 
+}
+
+nav ul li a {
+  position: relative;
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.2rem 0;
+  transition: color 0.3s;
+}
+
+
+
+nav a.active {
+  color: #808080;            
+  border-bottom-color: #808080;
+  font-weight: 600;
+}
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px; 
+  width: 0%;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%; 
+}
+
+
+nav ul li a.active {
+  color: #808080;
+  font-weight: 600;
+}
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
+  transition: background-color 0.4s ease, transform 0.3s ease, opacity 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Nav links */
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav ul li a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  display: inline-block; /* important for scaling */
+}
+
+/* Solid when idle */
+nav.nav-solid {
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: scale(1);
+  opacity: 1;
+}
+
+nav.nav-solid ul li a {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Transparent while scrolling (popup effect) */
+nav.nav-transparent {
+  background-color: rgba(0, 0, 0, 0.4);
+  transform: scale(1.05); /* navbar grows */
+  opacity: 0.95;
+}
+
+nav.nav-transparent ul li a {
+  transform: scale(1.1);  /* links pop */
+  opacity: 0.9;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+#home { background: #111; color: #fff; }
+#portfolio { background: #333; color: #fff; }
+#about { background: #555; color: #fff; }
+#contact { background: #777; color: #fff; }
+
+/* Social icons (top right in navbar) */
+.social-icons {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 1.2rem;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: #f0f0f0;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.social-icons a.instagram:hover {
+  color: #E4405F; /* Instagram pink */
+}
+
+.social-icons a.facebook:hover {
+  color: #1877F2; /* Facebook blue */
+}

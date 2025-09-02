@@ -1,0 +1,122 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta
+name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Gallery</title> <link rel="stylesheet" href="css/style.css">
+</head> <body> <section class="portfolio-section"> <div
+class="section-header"> <h2 class="section-title">my latest works</h2> <p
+class="section-description"> Cum sociis natoque penatibus et magnis dis
+parturient montes, nascetur ridiculus mus. Integer posuere erat. </p>
+            
+            <div class="filter-tabs">
+                <button class="filter-tab" data-filter="all">ALL</button>
+                <button class="filter-tab active" data-filter="print">PRINT</button>
+                <button class="filter-tab" data-filter="web">WEB DESIGN</button>
+                <button class="filter-tab" data-filter="logo">LOGO</button>
+                <button class="filter-tab" data-filter="motion">MOTION</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <div class="gallery-item" data-category="web">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=800&fit=crop" alt="Mobile App Design">
+                <div class="gallery-overlay">
+                    <div class="overlay-content">
+                        <h3 class="overlay-title">Music App Design</h3>
+                        <p class="overlay-category">Web Design</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="print">
+                <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=500&h=300&fit=crop" alt="Design Work">
+                <div class="gallery-overlay">
+                    <div class="overlay-content">
+                        <h3 class="overlay-title">Brand Identity</h3>
+                        <p class="overlay-category">Print Design</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="logo">
+                <img src="https://images.unsplash.com/photo-1558655146-364adaf48973?w=500&h=600&fit=crop" alt="Creative Project">
+                <div class="gallery-overlay">
+                    <div class="overlay-content">
+                        <h3 class="overlay-title">Logo Design</h3>
+                        <p class="overlay-category">Logo Design</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hidden items that show on "Show More" -->
+            <div class="gallery-item hidden-item" data-category="motion">
+                <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=400&fit=crop" alt="Motion Graphics">
+                <div class="gallery-overlay">
+                    <div class="overlay-content">
+                        <h3 class="overlay-title">Brand Animation</h3>
+                        <p class="overlay-category">Motion Graphics</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item hidden-item" data-category="web">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=400&fit=crop" alt="Website Design">
+                <div class="gallery-overlay">
+                    <div class="overlay-content">
+                        <h3 class="overlay-title">E-commerce Site</h3>
+                        <p class="overlay-category">Web Design</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item hidden-item" data-category="print">
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=500&h=600&fit=crop" alt="Print Design">
+                <div class="gallery-overlay">
+                    <div class="overlay-content">
+                        <h3 class="overlay-title">Magazine Layout</h3>
+                        <p class="overlay-category">Print Design</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item hidden-item" data-category="logo">
+                <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?w=500&h=400&fit=crop" alt="Logo Work">
+                <div class="gallery-overlay">
+                    <div class="overlay-content">
+                        <h3 class="overlay-title">Startup Branding</h3>
+                        <p class="overlay-category">Logo Design</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item hidden-item" data-category="motion">
+                <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=400&fit=crop" alt="Video Project">
+                <div class="gallery-overlay">
+                    <div class="overlay-content">
+                        <h3 class="overlay-title">Product Demo</h3>
+                        <p class="overlay-category">Motion Graphics</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item hidden-item" data-category="web">
+                <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=500&h=400&fit=crop" alt="Web App">
+                <div class="gallery-overlay">
+                    <div class="overlay-content">
+                        <h3 class="overlay-title">Dashboard Design</h3>
+                        <p class="overlay-category">Web Design</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Show More/Less Button -->
+        <div class="show-more-container">
+            <button class="show-more-btn" id="showMoreBtn">
+                <span class="btn-text">Show More Works</span>
+                <span class="btn-icon">▼</span>
+            </button>
+        </div>
+    </section>
+
+    <script src="js/portfolio.js"></script>
+</body>
+</html>

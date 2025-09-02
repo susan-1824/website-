@@ -1,0 +1,97 @@
+/* ====== SLIDER ====== */
+const slides = document.querySelectorAll(".slide");
+const buttons = document.querySelectorAll(".nav-buttons button");
+let currentSlide = 0;
+
+function showSlide(index) {
+  slides.forEach((s, i) => {
+    s.classList.toggle("active", i === index);
+    buttons[i].classList.toggle("active", i === index);
+  });
+  currentSlide = index;
+}
+
+buttons.forEach((btn, i) => btn.addEventListener("click", () => showSlide(i)));
+
+setInterval(() => {
+  const next = (currentSlide + 1) % slides.length;
+  showSlide(next);
+}, 4000);
+
+
+/* ====== MAIN NAVBAR ACTIVE ON SCROLL ====== */
+const navLinks = document.querySelectorAll("#navbar .nav-link");
+const sections = document.querySelectorAll("section");
+
+function setActiveNav() {
+  const scrollPos = window.scrollY + 100; // Adjust for navbar offset
+  let currentId = sections[0].id;
+
+  sections.forEach(section => {
+    if (scrollPos >= section.offsetTop) {
+      currentId = section.id;
+    }
+  });
+
+  // Handle bottom of page: highlight Contact
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
+    currentId = sections[sections.length - 1].id;
+  }
+
+  navLinks.forEach(link => {
+    link.classList.toggle("active", link.getAttribute("href") === `#${currentId}`);
+  });
+}
+
+window.addEventListener("scroll", setActiveNav);
+window.addEventListener("load", setActiveNav);
+window.addEventListener("resize", setActiveNav);
+
+
+/* ====== PORTFOLIO FILTER TABS ====== */
+const filterTabs = document.querySelectorAll('.filter-tab');
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+filterTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    // Remove active class from all tabs
+    filterTabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    const filterValue = tab.getAttribute('data-filter');
+
+    galleryItems.forEach(item => {
+      if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+        item.style.display = 'block';
+        setTimeout(() => {
+          item.style.opacity = '1';
+          item.style.transform = 'scale(1)';
+        }, 10);
+      } else {
+        item.style.opacity = '0';
+        item.style.transform = 'scale(0.8)';
+        setTimeout(() => {
+          item.style.display = 'none';
+        }, 300);
+      }
+    });
+  });
+});
+
+// Initialize with 'print' tab active
+document.addEventListener('DOMContentLoaded', () => {
+  const printTab = document.querySelector('[data-filter="print"]');
+  if (printTab) printTab.click();
+});
+
+
+/* ====== SHOW MORE WORKS BUTTON (optional) ====== */
+const showMoreBtn = document.getElementById("showMoreBtn");
+const hiddenItems = document.querySelectorAll(".hidden-item");
+
+if (showMoreBtn) {
+  showMoreBtn.addEventListener("click", () => {
+    hiddenItems.forEach(item => item.classList.toggle("show"));
+    showMoreBtn.classList.toggle("expanded");
+  });
+}
